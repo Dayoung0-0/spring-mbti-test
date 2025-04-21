@@ -34,6 +34,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: 'Cafe24Oneprettynight';
 }
 
 body {
@@ -224,6 +225,10 @@ button {
   font-family: 'Cafe24Oneprettynight';
 }
 
+.answer-button-group button {
+  font-family: 'Cafe24Oneprettynight';
+}
+
 /* progressBar -------------- */
 .progress-bar {
   width: 80%;
@@ -346,6 +351,7 @@ button {
   font-size: clamp(28px, 3vw, 32px);
   font-weight: bold;
   color: #fbd4e0;
+  font-family: 'Cafe24Oneprettynight';
 }
 
 .result-text-box {
