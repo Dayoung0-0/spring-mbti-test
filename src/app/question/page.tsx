@@ -6,16 +6,17 @@ import { QUESTIONLIST } from "../constants/mbtiTest";
 import { useState } from 'react';
 import LoadingScreen from '../components/LoadingScreen';
 import ProgressBar from '../components/ProgressBar';
+import { MBTITYPE } from '../constants/mbtiTypes';
 
 export default function Question() {
     const [pageNum, setPageNum] = useState(1);
     const [isLoading, setIsLoading] = useState(false);
-    const [mbti, setMbti] = useState<("E" | "I" | "S" | "N" | "T" | "F" | "P" | "J")[]>([]);
+    const [mbti, setMbti] = useState<MBTITYPE[]>([]);
 
     const router = useRouter();
     const currentQuestion = QUESTIONLIST[pageNum - 1];
 
-    const handleButtonClick = (type: any) => {
+    const handleButtonClick = (type: MBTITYPE) => {
         const updatedMbti = [...mbti, type]   // 이전 상태 + 질문에서 선택한 타입으로 배열 생성
         const nextPage = pageNum + 1;
 
@@ -33,24 +34,24 @@ export default function Question() {
         setPageNum(nextPage);
     }
 
-    const calculateMbti = (answers: string[]) => {
+    const calculateMbti = (answers: MBTITYPE[]) => {
         // 선택된 MBTI 타입들의 개수를 세서 객체로 만든다.
-        const countMap = answers.reduce((acc: any, cur) => {
+        const countMap = answers.reduce((acc: Record<MBTITYPE, number>, cur: MBTITYPE) => {
             acc[cur] = (acc[cur] || 0) + 1;
             return acc;
-        }, {})
-
+        }, { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, P: 0, J: 0 });
+    
         const result =
             ((countMap["E"] || 0) >= (countMap["I"] || 0) ? "E" : "I") +
             ((countMap["S"] || 0) >= (countMap["N"] || 0) ? "S" : "N") +
             ((countMap["T"] || 0) >= (countMap["F"] || 0) ? "T" : "F") +
             ((countMap["J"] || 0) >= (countMap["P"] || 0) ? "J" : "P");
-
+    
         console.log("countMap:", countMap);
         console.log("계산 결과:", result);
-
+    
         return result;
-    }
+    };
 
     return (
         <div className="box fade-in-up">

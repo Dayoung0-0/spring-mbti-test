@@ -33,3 +33,7 @@ export const MBTI = {
   ENFJ,
   ENTJ,
 };
+
+
+export type MBTITYPE = "E" | "I" | "S" | "N" | "T" | "F" | "P" | "J";
+
