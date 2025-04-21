@@ -78,6 +78,7 @@ const ResultComponent: React.FC = () => {
                     <div className="share-buttons">
                         {resultData?.title && resultData?.imageUrl && (
                             <KakaoShareButton
+                                id={resultData.id}
                                 title={resultData.title}
                                 imageUrl={resultData.imageUrl}
                             />
