@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "봄에 피어난 나 - 나만의 유형을 찾아보세요! 나에 대해 더 알아가는 시간",
 };
 
+// @ts-ignore - Kakao 객체에 대한 타입을 무시
 declare global {
   interface Window {
     Kakao: any;
