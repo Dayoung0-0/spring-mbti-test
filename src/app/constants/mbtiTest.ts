@@ -4,45 +4,45 @@ import { mbtiDescriptions } from './mbtiDescriptions';
 export const QUESTIONLIST = [
     {
         id: 1,
-        question: "벌써 봄! 날씨가 너무 좋은데 어디에서 시간을 보내볼까?",
+        question: "벌써 봄이다. 날씨도 좋은데 어디에서 시간을 보내볼까?",
         answer: [
-            { type: "I" as MBTITYPE, text: "조용한 벤치에 앉아 내가 좋아하는 노래를 들을래" },
-            { type: "E" as MBTITYPE, text: "사람이 가득한 벚꽃 명소, 에너지가 넘치는 기분이야" },
+            { type: "I" as MBTITYPE, text: "조용한 벤치에 앉아 좋아하는 노래를 들을래" },
+            { type: "E" as MBTITYPE, text: "사람이 가득한 벚꽃 명소로! 에너지가 넘치는 기분이야" },
         ],
         imageUrl: ""
     },
     {
         id: 2,
-        question: "벚꽃이 만개한 길을 걷다가, 문득 멈춰 섰을 때 드는 생각은?",
+        question: "벚꽃이 만개한 길을 걷다가, 문득 드는 생각은?",
         answer: [
-            { type: "S" as MBTITYPE, text: "꽃잎이 엄청 많네~ 날씨도 딱 좋고, 사진 찍기 최고다" },
+            { type: "S" as MBTITYPE, text: "꽃잎이 가득 피었네~ 사진 찍기 딱이네" },
             { type: "N" as MBTITYPE, text: "벚꽃은 왜 이렇게 빨리 질까? 뭔가 인생 같아.." },
         ],
         imageUrl: ""
     },
     {
         id: 3,
-        question: "딸기 축제 티켓를 못 구해서 우울해 하는 친구에게",
+        question: "딸기 축제 티켓을 못 구해서 우울해 하는 친구에게",
         answer: [
-            { type: "T" as MBTITYPE, text: "다른 방법을 찾아야지! 다른 축제나 딸기 관련 행사도 있을 거야" },
-            { type: "F" as MBTITYPE, text: "괜찮아~ 내년에 가면 되지! 같이 딸기 먹자" },
+            { type: "T" as MBTITYPE, text: "방법을 찾아보자! 다른 축제나 딸기 관련 행사도 있을 거야" },
+            { type: "F" as MBTITYPE, text: "괜찮아? 우울하면 나랑 같이 딸기 디저트 먹으러 가자" },
         ],
         imageUrl: ""
     },
     {
         id: 4,
-        question: "완벽한 피크닉 계획을 세웠는데 갑자기 봄비가 쏟아진다면?",
+        question: "완벽한 피크닉 계획을 세웠는데 갑자기 비가 오네..",
         answer: [
-            { type: "P" as MBTITYPE, text: "오히려 좋아! 피크닉은 미루고 오늘은 빗소리 감성에 푹 빠질래" },
-            { type: "J" as MBTITYPE, text: "이럴 줄 알고 플랜 B도 짜둘걸! 빠르게 계획 다시 세워야지" },
+            { type: "P" as MBTITYPE, text: "괜찮아! 피크닉은 미루고 오늘은 빗소리 감성에 푹 빠질래" },
+            { type: "J" as MBTITYPE, text: "이럴 줄 알고 플랜 B도 짜둘걸.. 빠르게 계획 다시 세워야지" },
         ],
         imageUrl: ""
     },
     {
         id: 5,
-        question: "봄에 어울리는 예쁜 옷을 사버렸어~",
+        question: "봄에 어울리는 예쁜 신발을 장만했다~",
         answer: [
-            { type: "I" as MBTITYPE, text: "날씨 좋고, 내게 소중한 날 입어야지~" },
+            { type: "I" as MBTITYPE, text: "어차피 잘 안나가니 중요한 약속 있을때 신어야지" },
             { type: "E" as MBTITYPE, text: "누구 만날 사람 없나? 빨리 이 옷 입고싶어!!" },
         ],
         imageUrl: ""
@@ -51,17 +51,17 @@ export const QUESTIONLIST = [
         id: 6,
         question: "봄이 오면 가장 먼저 떠오르는 건?",
         answer: [
-            { type: "S" as MBTITYPE, text: "따뜻한 햇살이랑 옷 얇아지는 거~ 바람도 딱 좋지" },
-            { type: "N" as MBTITYPE, text: "봄은 생명의 시작이야, 설레는 느낌이랄까" },
+            { type: "S" as MBTITYPE, text: "따뜻한 햇살과 봄바람, 그리고 벚꽃!" },
+            { type: "N" as MBTITYPE, text: "봄은 핑크빛, 생명의 시작, 설레는 느낌!" },
         ],
         imageUrl: ""
     },
     {
         id: 7,
-        question: "친구가 봄 옷을 샀다는데, 너무 안어울린다..",
+        question: "친구가 비싼 돈 주고 봄 옷을 샀다는데, 너무 안 어울린다",
         answer: [
-            { type: "T" as MBTITYPE, text: "너한테는 이런 스타일이 조금 더 잘 어울릴 것 같아!" },
-            { type: "F" as MBTITYPE, text: "잘 샀네~ (기분 나빠할 수도 있으니 예쁘다고 하자)" },
+            { type: "T" as MBTITYPE, text: "너랑 별로 안어울려! 다른 옷이 훨씬 나아" },
+            { type: "F" as MBTITYPE, text: "잘 샀네~ (슬퍼할수도 있으니 예쁘다고 하자)" },
         ],
         imageUrl: ""
     },
@@ -76,28 +76,28 @@ export const QUESTIONLIST = [
     },
     {
         id: 9,
-        question: "예쁘게 핀 벚꽃 구경중, 저 멀리서 걸어오는.. 아는 사람?",
+        question: "혼자 예쁘게 핀 벚꽃을 구경하던 중, 아는 사람을 발견했다!",
         answer: [
             { type: "I" as MBTITYPE, text: "마주치면 뻘쭘한데.. 제발 날 못봤으면" },
-            { type: "E" as MBTITYPE, text: "오! 여기서 만나다니~ 먼저 말 걸어버려" },
+            { type: "E" as MBTITYPE, text: "같이 구경하면 더 재밌겠다! 말 걸어야지" },
         ],
         imageUrl: ""
     },
     {
         id: 10,
-        question: "소풍 가서 누워 하늘을 보는데…",
+        question: "따뜻한 햇살을 즐기며 하늘을 바라보다가…",
         answer: [
-            { type: "S" as MBTITYPE, text: "구름 모양이 진짜 귀엽다~ 강아지 닮은 것도 있어!" },
-            { type: "N" as MBTITYPE, text: "구름은 멈추지 않고 흘러가네… 나도 계속 나아가야겠다" },
+            { type: "S" as MBTITYPE, text: "따뜻해서 졸리네~ 낮잠이나 잘까" },
+            { type: "N" as MBTITYPE, text: "구름 모양이 진짜 귀엽다~ 강아지 닮은 것도 있어!" },
         ],
         imageUrl: ""
     },
     {
         id: 11,
-        question: "봄맞이 대청소를 하기로 했는데 청소할 게 너무 많아 ㅠㅠ",
+        question: "친구랑 대청소를 하기로 했는데, 친구가 못오게 됐다..",
         answer: [
-            { type: "T" as MBTITYPE, text: "얼른 끝내려면 체계적으로 분류하고, 빠르고 효율적으로 해야지!" },
-            { type: "F" as MBTITYPE, text: "조금 귀찮지만, 깨끗한 집에서 기분 좋은 봄을 맞이할 생각에 힘이 나!" },
+          { type: "T" as MBTITYPE, text: "친구한테 치킨 쏘라 해야겠다. 어떻게 해야 금방 끝날까?" },
+          { type: "F" as MBTITYPE, text: "이 많은 걸 나 혼자 다 해야 한다니.. 속상하지만 해야지.." },
         ],
         imageUrl: ""
     },
@@ -105,8 +105,8 @@ export const QUESTIONLIST = [
         id: 12,
         question: "친구들이랑 벚꽃놀이 날짜 정할 때, 너는 어떤 역할?",
         answer: [
-            { type: "P" as MBTITYPE, text: "그냥 아무 때나 좋아~ 흐름 따라 가는 편이야" },
-            { type: "J" as MBTITYPE, text: "일단 다들 가능한 날짜 조사부터! 정확하게 정해야 맘이 편해" },
+            { type: "P" as MBTITYPE, text: "그냥 아무 때나 좋아~ 친구가 정하면 따라 가는 편이야" },
+            { type: "J" as MBTITYPE, text: "일단 가능한 날짜 조사부터! 정확하게 정해야 맘이 편해" },
         ],
         imageUrl: ""
     },

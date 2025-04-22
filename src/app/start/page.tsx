@@ -15,17 +15,19 @@ export default function Start() {
                 quality={100}
                 style={{ objectFit: "cover" }}
             />
-            <div className="title">
-                <p>봄에</p>
-                <p style={{ marginLeft: '25px' }}>피어난 나</p>
+            <div className="start-content-box">
+                <div className="title">
+                    <p>봄에</p>
+                    <p style={{ marginLeft: '25px' }}>피어난 나</p>
+                </div>
+                <button
+                    className="start-btn"
+                    onClick={() => router.push("/question")}
+                >
+                    테스트 시작하기
+                    <span className="petal"></span>
+                </button>
             </div>
-            <button
-                className="start-btn"
-                onClick={() => router.push("/question")}
-            >
-                테스트 시작하기
-                <span className="petal"></span>
-            </button>
         </>
     );
 }

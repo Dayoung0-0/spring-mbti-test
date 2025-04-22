@@ -23,7 +23,7 @@ export default function Question() {
         if (nextPage > QUESTIONLIST.length) { // 마지막 페이지일때
             const mbtiType = calculateMbti(updatedMbti);
             // console.log(mbtiType);
-            setIsLoading(true); 
+            setIsLoading(true);
             setTimeout(() => {
                 router.push(`/result?mbtiType=${mbtiType}`);
             }, 2500);
@@ -40,21 +40,21 @@ export default function Question() {
             acc[cur] = (acc[cur] || 0) + 1;
             return acc;
         }, { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, P: 0, J: 0 });
-    
+
         const result =
             ((countMap["E"] || 0) >= (countMap["I"] || 0) ? "E" : "I") +
             ((countMap["S"] || 0) >= (countMap["N"] || 0) ? "S" : "N") +
             ((countMap["T"] || 0) >= (countMap["F"] || 0) ? "T" : "F") +
             ((countMap["J"] || 0) >= (countMap["P"] || 0) ? "J" : "P");
-    
+
         console.log("countMap:", countMap);
         console.log("계산 결과:", result);
-    
+
         return result;
     };
 
     return (
-        <div className="box fade-in-up">
+        <>
             <Image
                 src="/images/background-flower.png"
                 alt="Background"
@@ -65,19 +65,21 @@ export default function Question() {
             {isLoading ? (
                 <LoadingScreen />
             ) : (
-                <>
+                <div className="question-content-box fade-in-up">
                     <ProgressBar progress={(currentQuestion.id / QUESTIONLIST.length) * 100} />
-                    <p className="question-number">{currentQuestion.id} / {QUESTIONLIST.length}</p>
-                    <p className="question-text">{currentQuestion.question}</p>
-                    <div className="answer-button-group">
+                    <div className="question-text-box">
+                        <p>{currentQuestion.id} / {QUESTIONLIST.length}</p>
+                        <p>{currentQuestion.question}</p>
+                    </div>
+                    <div className="answer-button-box">
                         {currentQuestion.answer.map((ans, idx) => (
-                            <button key={idx} onClick={() => handleButtonClick(ans.type)} className="question-btn">
+                            <button key={idx} onClick={() => handleButtonClick(ans.type)} className="answer-btn">
                                 {ans.text}
                             </button>
                         ))}
                     </div>
-                </>
+                </div>
             )}
-        </div>
+        </>
     );
 }

@@ -24,7 +24,7 @@ const ResultComponent: React.FC = () => {
     const hateMbti = resultData ? RESULTS.get(resultData.hate) : null;
 
     return (
-        <div className="box fade-in-up">
+        <>
             <Image
                 src="/images/background-flower.png"
                 alt="Background"
@@ -33,9 +33,8 @@ const ResultComponent: React.FC = () => {
                 style={{ objectFit: "cover" }}
             />
             {resultData ?
-                <div className="result-container">
+                <div className="result-content-box fade-in-up">
                     <Image
-                        className='result-image'
                         src={resultData.imageUrl}
                         alt="Background"
                         width={200}
@@ -53,7 +52,6 @@ const ResultComponent: React.FC = () => {
                         {likeMbti && (
                             <div className="like-mbti" onClick={() => router.push(`/result?mbtiType=${likeMbti.id}`)}>
                                 <Image
-                                    className="like-image"
                                     src={likeMbti.imageUrl}
                                     alt="like mbti"
                                     width={120}
@@ -65,7 +63,6 @@ const ResultComponent: React.FC = () => {
                         {hateMbti && (
                             <div className="hate-mbti" onClick={() => router.push(`/result?mbtiType=${hateMbti.id}`)}>
                                 <Image
-                                    className="hate-image"
                                     src={hateMbti.imageUrl}
                                     alt="hate mbti"
                                     width={120}
@@ -75,7 +72,7 @@ const ResultComponent: React.FC = () => {
                             </div>
                         )}
                     </div>
-                    <div className="share-buttons">
+                    <div className="share-box">
                         {resultData?.title && resultData?.imageUrl && (
                             <KakaoShareButton
                                 id={resultData.id}
@@ -85,7 +82,7 @@ const ResultComponent: React.FC = () => {
                         )}
                         <CopyLinkButton />
                     </div>
-                    <div className='bottom-box'>
+                    <div className='navigate-box'>
                         <button onClick={() => router.push("/start")}>&lt;&lt; 다시하기</button>
                         <button onClick={() => router.push("/results")}> 전체 결과 &gt;&gt;</button>
                     </div>
@@ -93,6 +90,6 @@ const ResultComponent: React.FC = () => {
                 :
                 <p>잘못된 접근입니다! {/** 추후 수정 error page component */}</p>
             }
-        </div>
+        </>
     );
 }

@@ -63,9 +63,12 @@ a {
 
 button {
   all: unset;
-  -webkit-appearance: none; /* Safari, iOS, 예전 Chrome */
-  -moz-appearance: none;    /* Firefox */
-  appearance: none;         /* 최신 브라우저용 */
+  -webkit-appearance: none;
+  /* Safari, iOS, 예전 Chrome */
+  -moz-appearance: none;
+  /* Firefox */
+  appearance: none;
+  /* 최신 브라우저용 */
   background-color: rgb(241, 241, 241);
   font-family: 'Cafe24Oneprettynight';
   width: 90%;
@@ -75,19 +78,37 @@ button {
   border: none;
   font-weight: 600;
   cursor: pointer;
-  color:black;
+  color: black;
 }
 
 .main-container {
-  height: 100vh;
   width: 100%;
   max-width: 550px;
+  height: auto;
+  min-height: 100vh;
+  padding-top: 27px;
+  padding-bottom: 27px;
   margin: 0px auto;
   position: relative;
   font-family: 'Cafe24Oneprettynight';
-  /* overflow-y: auto; */
-  /* overflow-x: hidden; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  justify-content: space-around;
 }
+
+.start-content-box {
+  z-index: 2;
+  width: 100%;
+  height: 90vh;
+  padding-top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 .fade-in-up {
   transform: translateY(20px);
@@ -107,14 +128,25 @@ button {
 }
 
 /* start -------------- */
+.title-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+  /* height: 95%; */
+  height: auto;
+  min-height: 100vh;
+}
+
 .title {
   color: white;
   font-size: clamp(80px, 9vw, 100px);
   position: relative;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-25%);
   font-family: 'Orbit_of_moon';
+  position: relative;
+  /* margin-top: 35%; */
 }
 
 .title::after {
@@ -160,12 +192,9 @@ button {
 }
 
 .start-btn {
+  z-index: 2;
   width: 90%;
   height: 80px;
-  position: absolute;
-  bottom: 5vh;
-  left: 5%;
-  font-size: 17px;
   border: none;
   border-radius: 40px;
   background-color: #fbd4e0;
@@ -183,55 +212,54 @@ button {
 }
 
 /* question -------------- */
-.box {
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
+.question-content-box {
+  z-index: 2;
+  width: 90%;
+  height: 85vh;
+  padding-top: 2%;
+  border-radius: 20px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.question-text-box {
+  gap: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 27px;
-  background: rgb(169, 233, 212);
+  font-size: clamp(15px, 3vw, 17px);
   text-align: center;
-  color: white;
-  position: relative;
-  justify-content: space-around;
-  gap: 120px;
 }
 
-.box p {
-  z-index: 1;
+
+.answer-button-box {
+  z-index: 2;
+  font-family: 'Cafe24Oneprettynight';
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.question-text {
-  line-height: 1.8em;
-  margin-top: -40%;
-  font-size: clamp(14px, 3vw, 16px);
-}
-
-.question-btn {
+.answer-btn {
+  width: 95%;
   z-index: 1;
   margin: 0 auto;
-  margin-bottom: 15px;
   font-weight: 600;
   text-align: center;
   border-radius: 5px;
-  font-size: clamp(12px, 3vw, 14px);
-}
-
-.answer-button-group {
-  z-index: 2;
-  width: 98%;
-  font-family: 'Cafe24Oneprettynight';
-}
-
-.answer-button-group button {
-  font-family: 'Cafe24Oneprettynight';
+  font-size: clamp(14px, 3vw, 15px);
 }
 
 /* progressBar -------------- */
 .progress-bar {
-  width: 80%;
+  width: 90%;
   height: 15px;
   z-index: 2;
   background: rgba(235, 235, 235, 0.575);
@@ -332,18 +360,19 @@ button {
 }
 
 /* result -------------- */
-.result-container {
+.result-content-box {
   z-index: 2;
   background: #b4b4b473;
   width: 90%;
   height: 850px;
-  left: 10%;
-  border: none;
+  /* left: 10%; */
+  /* border: none; */
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  position: relative;
 }
 
 .result-title {
@@ -352,12 +381,14 @@ button {
   font-weight: bold;
   color: #fbd4e0;
   font-family: 'Cafe24Oneprettynight';
+      text-align: center;
 }
 
 .result-text-box {
   font-size: clamp(15px, 3vw, 17px);
   color: #fef8f8;
   line-height: 1.8em;
+  text-align: center;
 }
 
 .match-box {
@@ -376,7 +407,7 @@ button {
   cursor: pointer;
 }
 
-.share-buttons {
+.share-box {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -431,13 +462,13 @@ button {
   z-index: 10;
 }
 
-.bottom-box {
+.navigate-box {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.bottom-box button {
+.navigate-box button {
   all: unset;
   cursor: pointer;
   font-size: 16px;
@@ -445,7 +476,7 @@ button {
 }
 
 /* results -------------- */
-.results-box {
+.results-content-box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -460,6 +491,7 @@ button {
   margin-bottom: 20px;
   font-size: 32px;
   font-weight: bold;
+  text-align: center;
 }
 
 .results-item {
