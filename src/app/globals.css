@@ -250,7 +250,8 @@ button {
 }
 
 .answer-btn p {
-  font-family: 'Cafe24Oneprettynight' !important;
+  font-family: 'Orbit_of_moon' !important;
+  font-weight: lighter;
 }
 
 /* progressBar -------------- */
