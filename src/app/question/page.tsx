@@ -74,7 +74,7 @@ export default function Question() {
                     <div className="answer-button-box">
                         {currentQuestion.answer.map((ans, idx) => (
                             <button key={idx} onClick={() => handleButtonClick(ans.type)} className="answer-btn">
-                                <p>{ans.text}</p>
+                                {ans.text}
                             </button>
                         ))}
                     </div>
