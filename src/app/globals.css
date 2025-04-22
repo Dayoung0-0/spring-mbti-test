@@ -63,12 +63,6 @@ a {
 
 button {
   all: unset;
-  -webkit-appearance: none;
-  /* Safari, iOS, 예전 Chrome */
-  -moz-appearance: none;
-  /* Firefox */
-  appearance: none;
-  /* 최신 브라우저용 */
   background-color: rgb(241, 241, 241);
   font-family: 'Cafe24Oneprettynight';
   width: 90%;
@@ -237,10 +231,9 @@ button {
   text-align: center;
 }
 
-
 .answer-button-box {
-  z-index: 2;
   font-family: 'Cafe24Oneprettynight';
+  z-index: 2;
   display: flex;
   gap: 13px;
   flex-wrap: wrap;
