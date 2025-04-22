@@ -232,7 +232,6 @@ button {
 }
 
 .answer-button-box {
-  font-family: 'Cafe24Oneprettynight';
   z-index: 2;
   display: flex;
   gap: 13px;
@@ -241,6 +240,7 @@ button {
 }
 
 .answer-btn {
+  font-family: 'Cafe24Oneprettynight' !important;
   width: 95%;
   z-index: 1;
   margin: 0 auto;
